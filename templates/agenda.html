@@ -1,0 +1,12 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+    <h1 style="font-size: 20px">
+        Agendamentos
+    </h1>
+    <ul style="font-size: 16px">
+        {%for evento in evento %}
+            <li>{{evento.titulo}} - {{evento.get_data_evento}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
