@@ -25,5 +25,8 @@ urlpatterns = [
     #path('', views.index)
     #Segundo modo: Preciso importar RedirectViews from django.views.generico
     #Essa segunda parte nao preciso criar uma views para importa-la
-    path('', RedirectView.as_view(url='/agenda/'))
+    path('', RedirectView.as_view(url='/agenda/')),
+    path('login/', views.login_user),
+    path('login/submit', views.submit_login),
+    path('logout/', views.logout_user)
 ]
