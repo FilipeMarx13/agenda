@@ -16,3 +16,5 @@ class Evento(models.Model):
         return self.titulo #Serve para eu usar o titulo na parte principal pois antes fica como objeto1 nome por default
     def get_data_evento(self):
         return self.data_evento.strftime('%d/%m/%Y - %H:%M Hrs')
+    def get_data_input_evento(self):
+        return self.data_evento.strftime('%Y-%m-%dT%H:%M')
